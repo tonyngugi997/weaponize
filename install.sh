@@ -21,3 +21,15 @@ fi
 mkdir -p "$HOME/.config/nvim"
 echo "✅ config directory ready at $HOME/.config/nvim"
 
+# copy new config files
+echo " "
+echo "copying new config files..."
+cp init.lua "$HOME/.config/nvim/init.lua"
+
+echo "✅ new config files copied successfully."
+echo "weaponize config installed at:"
+echo "$HOME/.config/nvim/init.lua"
+
+
+
+
