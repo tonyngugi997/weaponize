@@ -349,7 +349,7 @@ v20.11.0
 
 Open the next guide:
 
-### [➡️ CONFIGURATION.md](CONFIGURATION.md)
+### [➡️ CONFIGURATION.md](Configuration.md)
 
 In the next guide, you will:
 1. Clone the Weaponize repository using Git
