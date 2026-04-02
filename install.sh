@@ -139,7 +139,7 @@ author_signature() {
 ║        ██║   ╚██████╔╝██║ ╚████║   ██║                      ║
 ║        ╚═╝    ╚═════╝ ╚═╝  ╚═══╝   ╚═╝                      ║
 ║                                                              ║
-║                   ⚡ NGUGI WEAPON SYSTEMS ⚡                 ║
+║Prove you can handle the sacred flame without burning down the temple║
 ║                    localhost : Tony Ngugi                    ║
 ╚══════════════════════════════════════════════════════════════╝
 EOF
