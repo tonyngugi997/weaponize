@@ -1,5 +1,3 @@
----
-
 # ⚙️ Weaponize: Configuration Guide
 
 ## Phase 3 – Turning Vanilla Neovim Into a God-Mode IDE
@@ -8,7 +6,6 @@
 *Difficulty: 1/10 (Three commands. That's it.)*  
 *Prerequisites: You ought to have completed Installation.md*
 
----
 
 ## 📋 What Happens in This Guide
 
