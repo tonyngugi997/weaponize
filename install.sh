@@ -40,18 +40,37 @@ show_progress() {
     sleep 0.2
 }
 
-# Typing effect
+
 typewriter() {
     local text="$1"
     local delay=${2:-0.03}
+    local len=${#text}
+    local i=0
     
-    for ((i=0; i<${#text}; i++)); do
-        printf "${text:$i:1}"
-        sleep $delay
+    while [ $i -lt $len ]; do
+        char="${text:$i:1}"
+        
+        # Check if this is the escape character (ASCII 27)
+        if [ "$char" = $'\033' ]; then
+            # Find where the escape sequence ends (at 'm')
+            j=$i
+            while [ $j -lt $len ] && [ "${text:$j:1}" != 'm' ]; do
+                j=$((j + 1))
+            done
+            j=$((j + 1))  # Include the 'm'
+            
+            # Print entire escape sequence instantly
+            printf "${text:$i:$((j - i))}"
+            i=$j
+        else
+            # Print normal character with delay
+            printf "%s" "$char"
+            sleep $delay
+            i=$((i + 1))
+        fi
     done
     echo ""
 }
-
 # Success flash
 success_flash() {
     local message="$1"
