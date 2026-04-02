@@ -20,7 +20,6 @@
 
 **That's all. Three commands. No editing. No decisions.**
 
----
 
 ## ⚠️ Before You Start
 
@@ -33,9 +32,7 @@
 | ✅ Git installed | `git --version` | `git version 2.x.x` |
 | ✅ Internet connection | `ping -c 1 google.com` | `1 packets transmitted, 1 received` |
 
-**If any of these fail**, go back to [Installation.md](INSTALLATION.md) and complete Phase 1 & 2 first.
-
----
+**If any of these fail**, go back to [Installation.md](Installation.md) and complete Phase 1 & 2 first.
 
 # PHASE 3: Weaponizing Your Neovim
 
