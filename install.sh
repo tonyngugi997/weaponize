@@ -5,36 +5,137 @@ CYAN='\033[0;36m'
 GREEN='\033[0;32m'
 RED='\033[0;31m'
 YELLOW='\033[0;33m'
-NC='\033[0m' # No Color
+NC='\033[0m'
 BLUE='\033[0;34m'
 
+# Spinner anim
+spinner() {
+    local pid=$1
+    local delay=0.1
+    local spinstr='⠋⠙⠹⠸⠼⠴⠦⠧⠇⠏'
+    
+    while ps -p "$pid" > /dev/null 2>&1; do
+        local temp=${spinstr#?}
+        printf " [%c]  " "$spinstr"
+        local spinstr=$temp${spinstr%"$temp"}
+        sleep $delay
+        printf "\b\b\b\b\b\b"
+    done
+    printf "    \b\b\b\b"
+}
 
-# backup old nvim config
+# Progress bar
+show_progress() {
+    local duration=$1
+    local steps=20
+    local progress=0
+    
+    printf " ["
+    while [ $progress -le $steps ]; do
+        printf "="
+        progress=$((progress + 1))
+        sleep 0.05
+    done
+    printf "]"
+    sleep 0.2
+}
+
+# Typing effect
+typewriter() {
+    local text="$1"
+    local delay=${2:-0.03}
+    
+    for ((i=0; i<${#text}; i++)); do
+        printf "${text:$i:1}"
+        sleep $delay
+    done
+    echo ""
+}
+
+# Success flash
+success_flash() {
+    local message="$1"
+    
+    printf "\r${GREEN}✅ ${message}${NC}"
+    sleep 0.1
+    printf "\r${NC}   ${message}${NC}"
+    sleep 0.1
+    printf "\r${GREEN}✅ ${message}${NC}"
+    echo ""
+}
+
+echo ""
+typewriter "${CYAN}═══════════════════════════════════════════════════════════${NC}" 0.01
+typewriter "${CYAN} WEAPONIZE INSTALLER${NC}" 0.05
+typewriter "${CYAN}═══════════════════════════════════════════════════════════${NC}" 0.01
+echo ""
+
+# Backup old nvim config
+typewriter "🔍 Initializing weapon systems..." 0.05
+
 printf "${CYAN}checking for old nvim config... ${NC}"
 
 if [ -d "$HOME/.config/nvim" ]; then
-    echo "${BLUE}found old configs. Backing them up.....${NC}"
+    echo ""
+    typewriter "${BLUE}📦 Found old configs. Securing them in time capsule...${NC}" 0.03
     
     TIMESTAMP=$(date +"%Y-%m-%d_%H-%M-%S")
     
-    # Move the old config to a backup location
-    mv "$HOME/.config/nvim" "$HOME/.config/nvim_backup_$TIMESTAMP"
+    # Animated backup
+    mv "$HOME/.config/nvim" "$HOME/.config/nvim_backup_$TIMESTAMP" &
+    spinner $!
     
-    echo "${GREEN}✅ backup complete. Old configs moved to $HOME/.config/nvim_backup_$TIMESTAMP${NC}"
+    success_flash "Backup complete. Old configs moved to $HOME/.config/nvim_backup_$TIMESTAMP"
 else
-    echo "${YELLOW}no old configs found. Proceeding with clean installation...${NC}                                         ${NC}                           "
+    echo ""
+    typewriter "${YELLOW}✨ No old configs found. Fresh install detected.${NC}" 0.03
 fi
 
-# create nvim config directory if it doesn't exist
-mkdir -p "$HOME/.config/nvim"
-echo "${GREEN}✅ config directory ready at $HOME/.config/nvim${NC}"
+echo ""
 
-# copy new config files
-echo " "
-echo "${CYAN}copying new config files...${NC}"
-cp init.lua "$HOME/.config/nvim/init.lua"
+# Create config dir
+printf "${CYAN}📁 Preparing config directory...${NC}"
+mkdir -p "$HOME/.config/nvim" &
+spinner $!
+echo ""
+success_flash "Config directory ready at $HOME/.config/nvim"
 
-echo "${GREEN}✅ new config files copied successfully.${NC}"
-echo "${BLUE}weaponize config installed at:${NC}"
-echo "${GREEN}$HOME/.config/nvim/init.lua${NC}"
+echo ""
 
+# Copy config files
+typewriter "⚙️  Installing Weaponize configs..." 0.05
+
+printf "${CYAN}📦 Copying config files...${NC}"
+echo ""
+
+printf "   "
+show_progress 1
+
+cp init.lua "$HOME/.config/nvim/init.lua" &
+spinner $!
+
+echo ""
+success_flash "weaponize config  installed successfully"
+
+echo ""
+
+# Final success message
+typewriter "🔥 Finalizing weaponization..." 0.05
+sleep 0.5
+
+echo ""
+echo "${BLUE}═══════════════════════════════════════════════════════════${NC}"
+typewriter "${GREEN}✅ WEAPONIZE INSTALLED SUCCESSFULLY${NC}" 0.02
+echo "${BLUE}═══════════════════════════════════════════════════════════${NC}"
+echo ""
+
+typewriter "🚀 Type ${GREEN}nvim${NC} to start coding" 0.05
+echo ""
+
+typewriter "${YELLOW}📖 First launch will take 30-60 seconds${NC}" 0.03
+typewriter "   (Plugins are installing for the first time)" 0.03
+typewriter "   This only happens once. Be patient." 0.03
+echo ""
+
+typewriter "${GREEN}🔥 You are now weaponized. Go build something insane.${NC}" 0.05
+echo ""
