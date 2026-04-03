@@ -58,7 +58,7 @@ git clone https://github.com/tonyngugi997/weaponize.git
 <div style="display: flex; justify-content: center; margin: 24px 0;">
   <figure style="margin: 0; padding: 20px; background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%); border-radius: 12px; box-shadow: 0 8px 32px rgba(76, 175, 80, 0.3); max-width: 700px; width: 100%;">
     <div style="background: white; border-radius: 8px; padding: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
-      <img src="https://raw.githubusercontent.com/tonyngugi997/weaponize/master/images/Screenshot_20260403_094519_Termux.jpg" 
+      <img src="https://raw.githubusercontent.com/tonyngugi997/weaponize/master/images/git.jpg" 
            alt="Clone Output - Repository cloned successfully" 
            style="width: 100%; height: auto; max-width: 100%; border-radius: 6px; display: block; margin: 0 auto;">
     </div>
@@ -334,6 +334,19 @@ Look at the left edge of your editor. You should see **vertical dotted or solid 
 
 </div>
 
+<div style="display: flex; justify-content: center; margin: 20px 0;">
+  <figure style="margin: 0; padding: 16px; background: linear-gradient(135deg, #4CAF50 0%, #388E3C 100%); border-radius: 10px; box-shadow: 0 6px 24px rgba(76, 175, 80, 0.3); max-width: 600px; width: 100%;">
+    <div style="background: white; border-radius: 6px; padding: 12px; box-shadow: 0 3px 12px rgba(0,0,0,0.1);">
+      <img src="https://raw.githubusercontent.com/tonyngugi997/weaponize/master/images/Screenshot_20260403_104151_Termux.jpg" 
+           alt="Indentation guides showing nested code structure" 
+           style="width: 100%; height: auto; max-width: 100%; border-radius: 4px; display: block; margin: 0 auto;">
+    </div>
+    <figcaption style="text-align: center; margin-top: 8px; color: white; font-weight: 500; font-size: 13px;">
+      📏 Visual indentation guides for better code readability
+    </figcaption>
+  </figure>
+</div>
+
 > ✅ **If you see vertical lines → Indentation guides work.**
 
 ---
@@ -350,7 +363,18 @@ Type the following characters one by one:
 | `{` | `{}` with cursor between |
 | `[` | `[]` with cursor between |
 
-> ✅ **If characters auto-close → Auto-pairing works.**
+<div style="display: flex; justify-content: center; margin: 20px 0;">
+  <figure style="margin: 0; padding: 16px; background: linear-gradient(135deg, #E91E63 0%, #C2185B 100%); border-radius: 10px; box-shadow: 0 6px 24px rgba(233, 30, 99, 0.3); max-width: 600px; width: 100%;">
+    <div style="background: white; border-radius: 6px; padding: 12px; box-shadow: 0 3px 12px rgba(0,0,0,0.1);">
+      <img src="https://raw.githubusercontent.com/tonyngugi997/weaponize/master/images/Screenshot_20260403_104248_Termux.jpg" 
+           alt="Auto-pairing demonstration in code" 
+           style="width: 100%; height: auto; max-width: 100%; border-radius: 4px; display: block; margin: 0 auto;">
+    </div>
+    <figcaption style="text-align: center; margin-top: 8px; color: white; font-weight: 500; font-size: 13px;">
+      🔄 Automatic bracket and quote pairing in action
+    </figcaption>
+  </figure>
+</div>
 
 ---
 
@@ -363,7 +387,23 @@ Type the following characters one by one:
 | 3 | Look at indentation | Vertical lines on left edge | ☐ |
 | 4 | Type `"` | Auto-closes with `""` | ☐ |
 
-**If all four pass → You are fully weaponized. 🎉**
+<div style="display: flex; justify-content: center; margin: 24px 0;">
+  <figure style="margin: 0; padding: 20px; background: linear-gradient(135deg, #FFD700 0%, #FFA000 100%); border-radius: 12px; box-shadow: 0 8px 32px rgba(255, 215, 0, 0.4); max-width: 700px; width: 100%;">
+    <div style="background: white; border-radius: 8px; padding: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+      <img src="https://raw.githubusercontent.com/tonyngugi997/weaponize/master/images/Screenshot_20260403_104621_Termux.jpg" 
+           alt="Final verification - All tests passing" 
+           style="width: 100%; height: auto; max-width: 100%; border-radius: 6px; display: block; margin: 0 auto;">
+    </div>
+    <figcaption style="text-align: center; margin-top: 12px; color: #333; font-weight: 600; font-size: 14px;">
+      🎉 Fully weaponized Neovim ready for development
+    </figcaption>
+    <div style="text-align: center; margin-top: 8px;">
+      <span style="background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%); color: white; padding: 6px 12px; border-radius: 16px; font-weight: 600; font-size: 12px; box-shadow: 0 3px 12px rgba(255, 107, 53, 0.3);">
+        ✅ All Tests Passed - You're Weaponized!
+      </span>
+    </div>
+  </figure>
+</div>
 
 ---
 
@@ -383,6 +423,19 @@ Or open an existing one:
 cd ~/storage/downloads/my_project
 nvim .
 ```
+
+<div style="display: flex; justify-content: center; margin: 24px 0;">
+  <figure style="margin: 0; padding: 20px; background: linear-gradient(135deg, #3F51B5 0%, #2196F3 100%); border-radius: 12px; box-shadow: 0 8px 32px rgba(63, 81, 181, 0.3); max-width: 800px; width: 100%;">
+    <div style="background: white; border-radius: 8px; padding: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+      <img src="https://raw.githubusercontent.com/tonyngugi997/weaponize/master/images/Screenshot_20260403_104550_Termux.jpg" 
+           alt="Neovim in action - Ready to develop" 
+           style="width: 100%; height: auto; max-width: 100%; border-radius: 6px; display: block; margin: 0 auto;">
+    </div>
+    <figcaption style="text-align: center; margin-top: 12px; color: white; font-weight: 500; font-size: 14px;">
+      🚀 Start coding with your weaponized Neovim setup
+    </figcaption>
+  </figure>
+</div>
 
 ### Useful First Commands Inside Neovim:
 
