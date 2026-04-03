@@ -31,6 +31,14 @@
 
 **If any of these fail**, go back to [Installation.md](Installation.md) and complete Phase 1 & 2 first.
 
+<div style="text-align: center; margin: 16px 0; border: 2px solid #2196F3; border-radius: 8px; padding: 16px; background-color: #f0f4ff;">
+
+![Prerequisites Check - Verifying your setup](https://github.com/tonyngugi997/weaponize/blob/master/images/SCREENSHOT.jpg)
+
+*Verify your Termux environment is properly configured*
+
+</div>
+
 # PHASE 3: Weaponizing Your Neovim
 
 ## Step 3.1: Clone the Weaponize Repository 
@@ -185,14 +193,6 @@ os.closerange   os.mkdir        os.setregid
 
 </div>
 
-<div style="text-align: center; margin: 12px 0;">
-
-![Autocompletion popup showing available methods](https://raw.githubusercontent.com/tonyngugi997/weaponize/master/images/Screenshot_20260403_104234_Termux.jpg)
-
-*Intelligent autocompletion in action*
-
-</div>
-
 > ✅ **If you see this menu → Autocompletion works.**
 
 **To dismiss the menu:** Press `Esc` or keep typing.
@@ -229,14 +229,6 @@ A floating tooltip should appear showing documentation for the `os` module:
 
 </div>
 
-<div style="text-align: center; margin: 12px 0;">
-
-![Hover documentation showing module info](https://raw.githubusercontent.com/tonyngugi997/weaponize/master/images/Screenshot_20260403_104303_Termux.jpg)
-
-*LSP hover documentation displaying real-time help*
-
-</div>
-
 > ✅ **If you see this tooltip → LSP and hover work.**
 
 **To close the tooltip:** Press `Esc` or `Ctrl + C`.
@@ -260,14 +252,6 @@ Look at the left edge of your editor. You should see **vertical dotted or solid 
 
 </div>
 
-<div style="text-align: center; margin: 12px 0;">
-
-![Indentation guides showing nested code structure](https://raw.githubusercontent.com/tonyngugi997/weaponize/master/images/Screenshot_20260403_104151_Termux.jpg)
-
-*Visual indentation guides for better code readability*
-
-</div>
-
 > ✅ **If you see vertical lines → Indentation guides work.**
 
 ---
@@ -284,21 +268,11 @@ Type the following characters one by one:
 | `{` | `{}` with cursor between |
 | `[` | `[]` with cursor between |
 
-<div style="text-align: center; margin: 12px 0;">
-
-![Auto-pairing demonstration in code](https://raw.githubusercontent.com/tonyngugi997/weaponize/master/images/Screenshot_20260403_104248_Termux.jpg)
-
-*Automatic bracket and quote pairing in action*
-
-</div>
-
 > ✅ **If characters auto-close → Auto-pairing works.**
 
 ---
 
-<div style="border: 3px solid #4CAF50; border-radius: 8px; padding: 20px; margin: 20px 0; background-color: #f1f8e9; text-align: center;">
-
-## ✨ Step 3.5: The Complete Verification Checklist
+## Step 3.5: The Complete Verification Checklist
 
 | Test | Action | Expected Result | Pass? |
 |------|--------|-----------------|-------|
@@ -307,23 +281,7 @@ Type the following characters one by one:
 | 3 | Look at indentation | Vertical lines on left edge | ☐ |
 | 4 | Type `"` | Auto-closes with `""` | ☐ |
 
-<div style="text-align: center; margin: 16px 0;">
-
-![Final verification - All tests passing](https://raw.githubusercontent.com/tonyngugi997/weaponize/master/images/Screenshot_20260403_104621_Termux.jpg)
-
-*Fully weaponized Neovim ready for development*
-
-</div>
-
-### ✅ **If all four pass → You are fully weaponized. 🚀**
-
-<div style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); padding: 12px; border-radius: 6px; margin-top: 12px;">
-
-**💥 Your phone is now a professional IDE!**
-
-</div>
-
-</div>
+**If all four pass → You are fully weaponized. 🎉**
 
 ---
 
@@ -344,20 +302,6 @@ cd ~/storage/downloads/my_project
 nvim .
 ```
 
-<div style="text-align: center; margin: 16px 0;">
-
-![Neovim in action - Ready to develop](https://raw.githubusercontent.com/tonyngugi997/weaponize/master/images/Screenshot_20260403_104550_Termux.jpg)
-
-*Start coding with your weaponized Neovim setup*
-
-</div>
-<div style="text-align: center; margin: 16px 0;">
-
-![Neovim in action with Telescope file finder](https://raw.githubusercontent.com/tonyngugi997/weaponize/master/images/Screenshot_20260403_104550_Termux.jpg)
-
-*Start coding with your weaponized Neovim setup*
-
-</div>
 ### Useful First Commands Inside Neovim:
 
 | Command | What It Does |
