@@ -42,14 +42,13 @@ git clone https://github.com/tonyngugi997/weaponize.git
 ```
 **Press Enter.**
 
-**Expected output:**
-```
-Cloning into 'weaponize'...
-remote: Enumerating objects: 42, done.
-remote: Counting objects: 100% (42/42), done.
-remote: Compressing objects: 100% (35/35), done.
-Receiving objects: 100% (42/42), 89.00 KiB | 890.00 KiB/s, done.
-```
+<div style="border: 2px solid #4CAF50; border-radius: 8px; padding: 16px; margin: 16px 0; background-color: #f0f7f0;">
+
+**✅ Expected Output:**
+
+![Clone Output](https://raw.githubusercontent.com/tonyngugi997/weaponize/master/images/Screenshot_20260403_094519_Termux.jpg)
+
+</div>
 
 Now enter the Weaponize folder:
 
@@ -63,12 +62,16 @@ cd weaponize
 ls -la
 ```
 
-**You should see:**
-```
--rwxr-xr-x install.sh
--rw-r--r-- init.lua
-drwx------ lua/
-```
+<div style="border: 2px solid #4CAF50; border-radius: 8px; padding: 16px; margin: 16px 0; background-color: #f0f7f0;">
+
+**✅ Expected Output:**
+
+You should see these files:
+
+![Directory Listing](https://raw.githubusercontent.com/tonyngugi997/weaponize/master/images/Screenshot_20260403_094519_Termux.jpg)
+
+</div>
+
 
 > ✅ If you see `install.sh` and `init.lua`, you're in the right folder.
 
@@ -86,54 +89,41 @@ chmod +x install.sh
 ```bash
 ./install.sh
 ```
-### What You'll See:
 
-The script will output colored text showing each step:
+<div style="border: 2px solid #2196F3; border-radius: 8px; padding: 16px; margin: 16px 0; background-color: #f0f4ff;">
 
-```
-🔫 Weaponizing your Neovim...
+### ⏳ Expected Output:
 
-📦 Backing up existing Neovim config...
-✅ Backed up to ~/.config/nvim.backup.20250115_143022
+The script will run through these phases automatically:
 
-⚙️ Installing Weaponize config...
-✅ Config files copied
+![Installation Start](https://raw.githubusercontent.com/tonyngugi997/weaponize/master/images/Screenshot_20260403_094519_Termux.jpg)
 
-📦 Installing lazy.nvim plugin manager...
-✅ lazy.nvim installed
+*Backing up config, installing plugins...*
 
-🚀 Installing plugins (first launch may take 1-2 minutes)...
-✅ Plugins installed
+![Installation Progress](https://raw.githubusercontent.com/tonyngugi997/weaponize/master/images/Screenshot_20260403_094519_Termux.jpg)
 
-🌳 Installing Treesitter parsers...
-✅ Treesitter parsers installed
+*Plugins and Treesitter installation...*
 
-═══════════════════════════════════════════════════════════
-✅ WEAPONIZE INSTALLED SUCCESSFULLY
-═══════════════════════════════════════════════════════════
+![Installation Complete](https://raw.githubusercontent.com/tonyngugi997/weaponize/master/images/Screenshot_20260403_094519_Termux.jpg)
 
-🚀 Type 'nvim' to start coding
-
-📖 First-time tips:
-   • Type :Lazy to see installed plugins
-   • Type :Mason to install LSP servers
-   • Type :checkhealth to verify everything works
-
-🔥 You are now weaponized. Go build something insane.
-```
+</div>
 
 > ⏱️ **Total time:** 30-60 seconds depending on your internet speed.
 
-### If You See Errors:
+<div style="border: 2px solid #F44336; border-radius: 8px; padding: 16px; margin: 16px 0; background-color: #ffebee;">
+
+### ⚠️ If You See Errors:
 
 | Error | What To Do |
-|-------|------------|
+|-------|------------||
 | `Permission denied` | Run `chmod +x install.sh` again |
 | `git: command not found` | Run `pkg install git` then retry |
 | `nvim: command not found` | Run `pkg install neovim` then retry |
 | `Connection refused` | Check your internet, then rerun `./install.sh` |
 
 > 💡 **The script is safe to rerun.** It will not break anything.
+
+</div>
 
 ---
 
@@ -147,6 +137,8 @@ nvim
 
 You'll see lazy.nvim's progress screen:
 
+<div style="border-left: 4px solid #2196F3; background-color: #e3f2fd; padding: 12px; border-radius: 4px; margin: 12px 0;">
+
 ```
 [Lazy] Started
 [Lazy] Installing plugins...
@@ -155,6 +147,8 @@ You'll see lazy.nvim's progress screen:
 [Lazy] Installing telescope.nvim...
 [Lazy] All plugins installed!
 ```
+
+</div>
 
 **Wait for it to finish.** You'll eventually see Neovim's welcome screen with a clean, modern look.
 
@@ -181,6 +175,8 @@ os.
 
 **When you type the dot (`.`), a popup menu should appear** showing all methods inside `os`:
 
+<div style="border-left: 4px solid #FF9800; background-color: #fff3e0; padding: 12px; border-radius: 4px; margin: 12px 0;">
+
 ```
 os.abort        os.link         os.setegid
 os.add_dll_directory  os.listdir      os.seteuid
@@ -190,6 +186,8 @@ os.close        os.makedirs     os.setpid
 os.closerange   os.mkdir        os.setregid
 ...
 ```
+
+</div>
 
 > ✅ **If you see this menu → Autocompletion works.**
 
@@ -209,6 +207,8 @@ K
 
 A floating tooltip should appear showing documentation for the `os` module:
 
+<div style="border-left: 4px solid #9C27B0; background-color: #f3e5f5; padding: 12px; border-radius: 4px; margin: 12px 0;">
+
 ```
 ┌─────────────────────────────────────────────────────────┐
 │ os                                                      │
@@ -223,6 +223,8 @@ A floating tooltip should appear showing documentation for the `os` module:
 └─────────────────────────────────────────────────────────┘
 ```
 
+</div>
+
 > ✅ **If you see this tooltip → LSP and hover work.**
 
 **To close the tooltip:** Press `Esc` or `Ctrl + C`.
@@ -233,6 +235,8 @@ A floating tooltip should appear showing documentation for the `os` module:
 
 Look at the left edge of your editor. You should see **vertical dotted or solid lines** connecting indented lines:
 
+<div style="border-left: 4px solid #4CAF50; background-color: #e8f5e9; padding: 12px; border-radius: 4px; margin: 12px 0;">
+
 ```
 1 | import os
 2 | 
@@ -241,6 +245,8 @@ Look at the left edge of your editor. You should see **vertical dotted or solid 
 5 │     if True:
 6 │ │         print("nested")  ← Two lines here
 ```
+
+</div>
 
 > ✅ **If you see vertical lines → Indentation guides work.**
 
@@ -262,6 +268,8 @@ Type the following characters one by one:
 
 ---
 
+<div style="border: 3px solid #4CAF50; border-radius: 8px; padding: 16px; margin: 16px 0; background-color: #f1f8e9;">
+
 ## Step 3.5: The Complete Verification Checklist
 
 | Test | Action | Expected Result | Pass? |
@@ -272,6 +280,8 @@ Type the following characters one by one:
 | 4 | Type `"` | Auto-closes with `""` | ☐ |
 
 **If all four pass → You are fully weaponized. 🎉**
+
+</div>
 
 ---
 
@@ -331,16 +341,19 @@ nvim .
 
 ---
 
+<div style="border: 2px solid #FF6F00; border-radius: 8px; padding: 16px; margin: 16px 0; background-color: #fff3e0;">
+
 ## 🐛 Quick Troubleshooting
 
 | Problem | Most Likely Fix |
-|---------|-----------------|
+|---------|------------------|
 | `os.` doesn't show methods | Run `:Lazy sync` inside Neovim, then restart |
 | `K` doesn't show tooltip | Run `:LspRestart` inside Neovim |
 | Colors look weird | Run `:TSInstallSync python` inside Neovim |
 | Neovim is slow on first launch | That's normal. Wait 30 seconds. It will be fast after. |
 | `command not found: nvim` | You closed Termux. Reopen Termux and type `nvim` again. |
 
+</div>
 
 ---
 
