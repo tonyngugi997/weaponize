@@ -83,7 +83,7 @@ ls -la
 <div style="display: flex; justify-content: center; margin: 24px 0;">
   <figure style="margin: 0; padding: 20px; background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%); border-radius: 12px; box-shadow: 0 8px 32px rgba(76, 175, 80, 0.3); max-width: 700px; width: 100%;">
     <div style="background: white; border-radius: 8px; padding: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
-      <img src="https://raw.githubusercontent.com/tonyngugi997/weaponize/master/images/Screenshot_20260403_094529_Termux.jpg" 
+      <img src="https://raw.githubusercontent.com/tonyngugi997/weaponize/master/images/ls-la" 
            alt="Directory Listing - init.lua and install.sh visible" 
            style="width: 100%; height: auto; max-width: 100%; border-radius: 6px; display: block; margin: 0 auto;">
     </div>
@@ -119,7 +119,7 @@ chmod +x install.sh
     <!-- Installation Start -->
     <figure style="margin: 0; padding: 16px; background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%); border-radius: 10px; box-shadow: 0 6px 24px rgba(33, 150, 243, 0.3);">
       <div style="background: white; border-radius: 6px; padding: 12px; box-shadow: 0 3px 12px rgba(0,0,0,0.1);">
-        <img src="https://raw.githubusercontent.com/tonyngugi997/weaponize/master/images/Screenshot_20260403_101426_Termux.jpg" 
+        <img src="https://raw.githubusercontent.com/tonyngugi997/weaponize/master/images/install.sh.jpg" 
              alt="Installation Start - Making script executable" 
              style="width: 100%; height: auto; max-width: 100%; border-radius: 4px; display: block; margin: 0 auto;">
       </div>
