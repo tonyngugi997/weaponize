@@ -31,12 +31,17 @@
 
 **If any of these fail**, go back to [Installation.md](Installation.md) and complete Phase 1 & 2 first.
 
-<div style="text-align: center; margin: 16px 0; border: 2px solid #2196F3; border-radius: 8px; padding: 16px; background-color: #f0f4ff;">
-
-![Prerequisites Check - Verifying your setup](https://github.com/tonyngugi997/weaponize/blob/master/images/SCREENSHOT.jpg)
-
-*Verify your Termux environment is properly configured*
-
+<div style="display: flex; justify-content: center; margin: 24px 0;">
+  <figure style="margin: 0; padding: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3); max-width: 600px; width: 100%;">
+    <div style="background: white; border-radius: 8px; padding: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+      <img src="https://raw.githubusercontent.com/tonyngugi997/weaponize/master/images/SCREENSHOT.jpg" 
+           alt="Prerequisites Check - Verifying your setup" 
+           style="width: 100%; height: auto; max-width: 100%; border-radius: 6px; display: block; margin: 0 auto;">
+    </div>
+    <figcaption style="text-align: center; margin-top: 12px; color: white; font-weight: 500; font-size: 14px;">
+      🔍 Verify your Termux environment is properly configured
+    </figcaption>
+  </figure>
 </div>
 
 # PHASE 3: Weaponizing Your Neovim
@@ -50,12 +55,17 @@ git clone https://github.com/tonyngugi997/weaponize.git
 ```
 **Press Enter.**
 
-<div style="border: 2px solid #4CAF50; border-radius: 8px; padding: 16px; margin: 16px 0; background-color: #f0f7f0;">
-
-**✅ Expected Output:**
-
-![Clone Output](https://raw.githubusercontent.com/tonyngugi997/weaponize/master/images/Screenshot_20260403_094519_Termux.jpg)
-
+<div style="display: flex; justify-content: center; margin: 24px 0;">
+  <figure style="margin: 0; padding: 20px; background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%); border-radius: 12px; box-shadow: 0 8px 32px rgba(76, 175, 80, 0.3); max-width: 700px; width: 100%;">
+    <div style="background: white; border-radius: 8px; padding: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+      <img src="https://raw.githubusercontent.com/tonyngugi997/weaponize/master/images/Screenshot_20260403_094519_Termux.jpg" 
+           alt="Clone Output - Repository cloned successfully" 
+           style="width: 100%; height: auto; max-width: 100%; border-radius: 6px; display: block; margin: 0 auto;">
+    </div>
+    <figcaption style="text-align: center; margin-top: 12px; color: white; font-weight: 500; font-size: 14px;">
+      📦 Repository cloned successfully - Ready for installation
+    </figcaption>
+  </figure>
 </div>
 
 Now enter the Weaponize folder:
@@ -70,14 +80,17 @@ cd weaponize
 ls -la
 ```
 
-<div style="border: 2px solid #4CAF50; border-radius: 8px; padding: 16px; margin: 16px 0; background-color: #f0f7f0;">
-
-**✅ Expected Output:**
-
-You should see these files:
-
-![Directory Listing](https://raw.githubusercontent.com/tonyngugi997/weaponize/master/images/Screenshot_20260403_094519_Termux.jpg)
-
+<div style="display: flex; justify-content: center; margin: 24px 0;">
+  <figure style="margin: 0; padding: 20px; background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%); border-radius: 12px; box-shadow: 0 8px 32px rgba(76, 175, 80, 0.3); max-width: 700px; width: 100%;">
+    <div style="background: white; border-radius: 8px; padding: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+      <img src="https://raw.githubusercontent.com/tonyngugi997/weaponize/master/images/Screenshot_20260403_094529_Termux.jpg" 
+           alt="Directory Listing - init.lua and install.sh visible" 
+           style="width: 100%; height: auto; max-width: 100%; border-radius: 6px; display: block; margin: 0 auto;">
+    </div>
+    <figcaption style="text-align: center; margin-top: 12px; color: white; font-weight: 500; font-size: 14px;">
+      📁 Files ready for installation - Configuration verified
+    </figcaption>
+  </figure>
 </div>
 
 
@@ -98,25 +111,55 @@ chmod +x install.sh
 ./install.sh
 ```
 
-<div style="border: 2px solid #2196F3; border-radius: 8px; padding: 16px; margin: 16px 0; background-color: #f0f4ff;">
-
-### ⏳ Expected Output:
-
-The script will run through these phases automatically:
-
-![Installation Start](https://raw.githubusercontent.com/tonyngugi997/weaponize/master/images/Screenshot_20260403_094519_Termux.jpg)
-
-*Backing up config, installing plugins...*
-
-![Installation Progress](https://raw.githubusercontent.com/tonyngugi997/weaponize/master/images/Screenshot_20260403_094519_Termux.jpg)
-
-*Plugins and Treesitter installation...*
-
-![Installation Complete](https://raw.githubusercontent.com/tonyngugi997/weaponize/master/images/Screenshot_20260403_094519_Termux.jpg)
-
+<div style="margin: 32px 0;">
+  <h4 style="text-align: center; color: #1976D2; margin-bottom: 24px; font-size: 18px;">⏳ Installation Process - Step by Step</h4>
+  
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 20px;">
+    
+    <!-- Installation Start -->
+    <figure style="margin: 0; padding: 16px; background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%); border-radius: 10px; box-shadow: 0 6px 24px rgba(33, 150, 243, 0.3);">
+      <div style="background: white; border-radius: 6px; padding: 12px; box-shadow: 0 3px 12px rgba(0,0,0,0.1);">
+        <img src="https://raw.githubusercontent.com/tonyngugi997/weaponize/master/images/Screenshot_20260403_101426_Termux.jpg" 
+             alt="Installation Start - Making script executable" 
+             style="width: 100%; height: auto; max-width: 100%; border-radius: 4px; display: block; margin: 0 auto;">
+      </div>
+      <figcaption style="text-align: center; margin-top: 8px; color: white; font-weight: 500; font-size: 13px;">
+        🚀 Phase 1: Configuration & Setup
+      </figcaption>
+    </figure>
+    
+    <!-- Installation Progress -->
+    <figure style="margin: 0; padding: 16px; background: linear-gradient(135deg, #FF9800 0%, #F57C00 100%); border-radius: 10px; box-shadow: 0 6px 24px rgba(255, 152, 0, 0.3);">
+      <div style="background: white; border-radius: 6px; padding: 12px; box-shadow: 0 3px 12px rgba(0,0,0,0.1);">
+        <img src="https://raw.githubusercontent.com/tonyngugi997/weaponize/master/images/Screenshot_20260403_101427_Termux.jpg" 
+             alt="Installation Progress - Plugins installing" 
+             style="width: 100%; height: auto; max-width: 100%; border-radius: 4px; display: block; margin: 0 auto;">
+      </div>
+      <figcaption style="text-align: center; margin-top: 8px; color: white; font-weight: 500; font-size: 13px;">
+        ⚙️ Phase 2: Installing Plugins & LSP
+      </figcaption>
+    </figure>
+    
+    <!-- Installation Complete -->
+    <figure style="margin: 0; padding: 16px; background: linear-gradient(135deg, #4CAF50 0%, #388E3C 100%); border-radius: 10px; box-shadow: 0 6px 24px rgba(76, 175, 80, 0.3);">
+      <div style="background: white; border-radius: 6px; padding: 12px; box-shadow: 0 3px 12px rgba(0,0,0,0.1);">
+        <img src="https://raw.githubusercontent.com/tonyngugi997/weaponize/master/images/Screenshot_20260403_102905_Termux.jpg" 
+             alt="Installation Wrapping Up - Final stages" 
+             style="width: 100%; height: auto; max-width: 100%; border-radius: 4px; display: block; margin: 0 auto;">
+      </div>
+      <figcaption style="text-align: center; margin-top: 8px; color: white; font-weight: 500; font-size: 13px;">
+        ✅ Phase 3: Finalizing Installation
+      </figcaption>
+    </figure>
+    
+  </div>
+  
+  <div style="text-align: center; margin-top: 16px;">
+    <div style="display: inline-block; background: linear-gradient(135deg, #E91E63 0%, #C2185B 100%); color: white; padding: 8px 16px; border-radius: 20px; font-weight: 600; font-size: 14px; box-shadow: 0 4px 16px rgba(233, 30, 99, 0.3);">
+      ⏱️ Total Installation Time: 30-60 seconds
+    </div>
+  </div>
 </div>
-
-> ⏱️ **Total time:** 30-60 seconds depending on your internet speed.
 
 ### If You See Errors:
 
@@ -156,6 +199,19 @@ You'll see lazy.nvim's progress screen:
 
 **Wait for it to finish.** You'll eventually see Neovim's welcome screen with a clean, modern look.
 
+<div style="display: flex; justify-content: center; margin: 24px 0;">
+  <figure style="margin: 0; padding: 20px; background: linear-gradient(135deg, #9C27B0 0%, #7B1FA2 100%); border-radius: 12px; box-shadow: 0 8px 32px rgba(156, 39, 176, 0.3); max-width: 800px; width: 100%;">
+    <div style="background: white; border-radius: 8px; padding: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+      <img src="https://raw.githubusercontent.com/tonyngugi997/weaponize/master/images/Screenshot_20260403_102941_Termux.jpg" 
+           alt="Neovim Launch - Welcome screen" 
+           style="width: 100%; height: auto; max-width: 100%; border-radius: 6px; display: block; margin: 0 auto;">
+    </div>
+    <figcaption style="text-align: center; margin-top: 12px; color: white; font-weight: 500; font-size: 14px;">
+      🎯 Neovim launches with your weaponized config - Ready for development
+    </figcaption>
+  </figure>
+</div>
+
 ---
 
 ## Step 3.4: Verify Your Weapon Works
@@ -193,6 +249,19 @@ os.closerange   os.mkdir        os.setregid
 
 </div>
 
+<div style="display: flex; justify-content: center; margin: 20px 0;">
+  <figure style="margin: 0; padding: 16px; background: linear-gradient(135deg, #FF9800 0%, #F57C00 100%); border-radius: 10px; box-shadow: 0 6px 24px rgba(255, 152, 0, 0.3); max-width: 600px; width: 100%;">
+    <div style="background: white; border-radius: 6px; padding: 12px; box-shadow: 0 3px 12px rgba(0,0,0,0.1);">
+      <img src="https://raw.githubusercontent.com/tonyngugi997/weaponize/master/images/Screenshot_20260403_104234_Termux.jpg" 
+           alt="Autocompletion popup showing available methods" 
+           style="width: 100%; height: auto; max-width: 100%; border-radius: 4px; display: block; margin: 0 auto;">
+    </div>
+    <figcaption style="text-align: center; margin-top: 8px; color: white; font-weight: 500; font-size: 13px;">
+      💡 Intelligent autocompletion in action
+    </figcaption>
+  </figure>
+</div>
+
 > ✅ **If you see this menu → Autocompletion works.**
 
 **To dismiss the menu:** Press `Esc` or keep typing.
@@ -227,6 +296,19 @@ A floating tooltip should appear showing documentation for the `os` module:
 └─────────────────────────────────────────────────────────┘
 ```
 
+</div>
+
+<div style="display: flex; justify-content: center; margin: 20px 0;">
+  <figure style="margin: 0; padding: 16px; background: linear-gradient(135deg, #9C27B0 0%, #7B1FA2 100%); border-radius: 10px; box-shadow: 0 6px 24px rgba(156, 39, 176, 0.3); max-width: 600px; width: 100%;">
+    <div style="background: white; border-radius: 6px; padding: 12px; box-shadow: 0 3px 12px rgba(0,0,0,0.1);">
+      <img src="https://raw.githubusercontent.com/tonyngugi997/weaponize/master/images/Screenshot_20260403_104303_Termux.jpg" 
+           alt="Hover documentation showing module info" 
+           style="width: 100%; height: auto; max-width: 100%; border-radius: 4px; display: block; margin: 0 auto;">
+    </div>
+    <figcaption style="text-align: center; margin-top: 8px; color: white; font-weight: 500; font-size: 13px;">
+      📖 LSP hover documentation displaying real-time help
+    </figcaption>
+  </figure>
 </div>
 
 > ✅ **If you see this tooltip → LSP and hover work.**
