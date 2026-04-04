@@ -29,3 +29,23 @@ vim.g.maplocalleader = " "
 
 --##############################################
 
+--GLOBAL KEYMAPS
+local map = vim.keymap.set
+local opts = { noremap = true, silent = true }
+
+map("n", "<leader>w", ":w<CR>", { desc = "Save file" })
+map("n", "<leader>q", ":q<CR>", { desc = "Quit file" })
+map("n", "<leader>Q", ":qa!<CR>", { desc = "Quit all" })
+map("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "File explorer" })
+map("n", "<leader>ff", ":Telescope find_files<CR>", { desc = "Find files" })
+map("n", "<leader>fg", ":Telescope live_grep<CR>", { desc = "Live grep" })
+map("n", "<leader>fb", ":Telescope buffers<CR>", { desc = "Buffers" })
+map("n", "<leader>fh", ":Telescope help_tags<CR>", { desc = "Help" })
+map("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
+map("n", "gr", vim.lsp.buf.references, { desc = "Find references" })
+map("n", "K", vim.lsp.buf.hover, { desc = "Hover documentation" })
+map("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename symbol" })
+map("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action" })
+map("n", "[d", vim.diagnostic.goto_prev, { desc = "Previous diagnostic" })
+map("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostic" })
+map("n", "<leader>f", function() vim.lsp.buf.format({ async = true }) end, { desc = "Format file" })
