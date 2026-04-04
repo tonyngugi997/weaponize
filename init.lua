@@ -148,3 +148,16 @@ require("lazy").setup({
                 },
             })
 
+                        -- Lua
+            lspconfig.lua_ls.setup({
+                on_attach = on_attach,
+                capabilities = capabilities,
+                settings = { Lua = { runtime = { version = "LuaJIT" }, diagnostics = { globals = { "vim" } } } },
+            })
+            -- TypeScript / JavaScript
+            lspconfig.tsserver.setup({ on_attach = on_attach, capabilities = capabilities })
+            -- Rust
+            lspconfig.rust_analyzer.setup({ on_attach = on_attach, capabilities = capabilities })
+        end,
+    }
+
