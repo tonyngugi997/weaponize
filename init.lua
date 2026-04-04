@@ -284,3 +284,37 @@ require("lazy").setup({
             })
         end,
     },
+
+    
+    -- =========================== INDENTATION GUIDES (fixed) ===========================
+    {
+        "lukas-reineke/indent-blankline.nvim",
+        main = "ibl",
+        config = function()
+            require("ibl").setup({
+                indent = { char = "│", highlight = "Whitespace" },
+                scope = { enabled = true, show_start = false, show_end = false },
+                exclude = { filetypes = { "help", "dashboard", "lazy", "mason" } },
+            })
+        end,
+    },
+
+    -- =========================== GIT INTEGRATION ===========================
+    {
+        "lewis6991/gitsigns.nvim",
+        config = function()
+            require("gitsigns").setup({
+                signs = {
+                    add = { text = "+" },
+                    change = { text = "~" },
+                    delete = { text = "_" },
+                },
+                on_attach = function(bufnr)
+                    local gs = package.loaded.gitsigns
+                    vim.keymap.set("n", "<leader>hs", gs.stage_hunk, { buffer = bufnr })
+                    vim.keymap.set("n", "<leader>hr", gs.reset_hunk, { buffer = bufnr })
+                    vim.keymap.set("n", "<leader>hp", gs.preview_hunk, { buffer = bufnr })
+                end,
+            })
+        end,
+    },
