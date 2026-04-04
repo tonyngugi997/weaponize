@@ -133,3 +133,18 @@ require("lazy").setup({
                 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, bufopts)
             end
 
+              -- Python (pyright) – this gives you os.listdir, etc.
+            lspconfig.pyright.setup({
+                on_attach = on_attach,
+                capabilities = capabilities,
+                settings = {
+                    python = {
+                        analysis = {
+                            typeCheckingMode = "basic",
+                            autoSearchPaths = true,
+                            useLibraryCodeForTypes = true,
+                        },
+                    },
+                },
+            })
+
