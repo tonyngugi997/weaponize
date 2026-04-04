@@ -237,3 +237,30 @@ require("lazy").setup({
     "rafamadriz/friendly-snippets",
     "onsails/lspkind.nvim",
 
+
+    
+    --FILE EXPLORER (nvim-tree)
+    {
+        "nvim-tree/nvim-tree.lua",
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+        config = function()
+            require("nvim-tree").setup({
+                view = {
+                    width = 30,
+                    side = "left",
+                    number = false,
+                    relativenumber = false,
+                },
+                renderer = {
+                    group_empty = true,
+                    icons = {
+                        show = { file = true, folder = true, folder_arrow = true, git = true },
+                    },
+                },
+                filters = { dotfiles = false },
+                git = { ignore = false },
+                actions = { open_file = { quit_on_open = false } },
+            })
+        end,
+    },
+
