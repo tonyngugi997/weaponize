@@ -49,3 +49,20 @@ map("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action" })
 map("n", "[d", vim.diagnostic.goto_prev, { desc = "Previous diagnostic" })
 map("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostic" })
 map("n", "<leader>f", function() vim.lsp.buf.format({ async = true }) end, { desc = "Format file" })
+
+--##############################################
+
+-- terminal (toggleterm) 
+map("n", "<leader>tt", ":ToggleTerm<CR>", { desc = "Toggle terminal" })
+
+--##############################################
+
+--PLUGIN CONFIGURATIONS (lazy.nvim)
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+    vim.fn.system({
+        "git", "clone", "--filter=blob:none",
+        "https://github.com/folke/lazy.nvim.git", "--branch=stable", lazypath,
+    })
+end
+vim.opt.rtp:prepend(lazypath)
