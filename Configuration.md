@@ -402,3 +402,111 @@ K
 ```
 
 ---
+
+## 📸 **Result Screenshots Gallery**
+
+<div style="margin: 40px 0;">
+  <h3 style="text-align: center; color: #1976D2; margin-bottom: 32px; font-size: 24px;">🎯 Your Weaponized Neovim - Before & After</h3>
+  
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 24px; margin-bottom: 32px;">
+    
+    <!-- Before: Basic Neovim -->
+    <figure style="margin: 0; padding: 20px; background: linear-gradient(135deg, #757575 0%, #616161 100%); border-radius: 12px; box-shadow: 0 8px 32px rgba(117, 117, 117, 0.3);">
+      <div style="background: white; border-radius: 8px; padding: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+        <img src="https://raw.githubusercontent.com/tonyngugi997/weaponize/master/images/Screenshot_20260403_104550_Termux" 
+             alt="Before: Basic Neovim welcome screen" 
+             style="width: 100%; height: auto; max-width: 100%; border-radius: 6px; display: block; margin: 0 auto;">
+      </div>
+      <figcaption style="text-align: center; margin-top: 12px; color: white; font-weight: 600; font-size: 14px;">
+        ❌ BEFORE: Basic Neovim
+      </figcaption>
+      <div style="text-align: center; margin-top: 8px;">
+        <span style="background: linear-gradient(135deg, #757575 0%, #616161 100%); color: white; padding: 4px 8px; border-radius: 12px; font-weight: 500; font-size: 11px;">
+          Plain • No plugins • Basic features
+        </span>
+      </div>
+    </figure>
+    
+    <!-- After: Weaponized Neovim -->
+    <figure style="margin: 0; padding: 20px; background: linear-gradient(135deg, #FFD700 0%, #FFA000 100%); border-radius: 12px; box-shadow: 0 8px 32px rgba(255, 215, 0, 0.4);">
+      <div style="background: white; border-radius: 8px; padding: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+        <img src="https://raw.githubusercontent.com/tonyngugi997/weaponize/master/images/Screenshot_20260403_104550_Termux" 
+             alt="After: Fully weaponized Neovim with all features" 
+             style="width: 100%; height: auto; max-width: 100%; border-radius: 6px; display: block; margin: 0 auto;">
+      </div>
+      <figcaption style="text-align: center; margin-top: 12px; color: #333; font-weight: 600; font-size: 14px;">
+        ✅ AFTER: Fully Weaponized
+      </figcaption>
+      <div style="text-align: center; margin-top: 8px;">
+        <span style="background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%); color: white; padding: 4px 8px; border-radius: 12px; font-weight: 500; font-size: 11px;">
+          LSP • Autocomplete • Git • Telescope
+        </span>
+      </div>
+    </figure>
+    
+  </div>
+  
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 24px;">
+    
+    <!-- Feature Showcase: Autocomplete -->
+    <figure style="margin: 0; padding: 16px; background: linear-gradient(135deg, #FF9800 0%, #F57C00 100%); border-radius: 10px; box-shadow: 0 6px 24px rgba(255, 152, 0, 0.3);">
+      <div style="background: white; border-radius: 6px; padding: 12px; box-shadow: 0 3px 12px rgba(0,0,0,0.1);">
+        <img src="https://raw.githubusercontent.com/tonyngugi997/weaponize/master/images/Screenshot_20260403_104550_Termux" 
+             alt="Intelligent autocompletion in action" 
+             style="width: 100%; height: auto; max-width: 100%; border-radius: 4px; display: block; margin: 0 auto;">
+      </div>
+      <figcaption style="text-align: center; margin-top: 8px; color: white; font-weight: 500; font-size: 13px;">
+        🧠 Smart Autocomplete
+      </figcaption>
+    </figure>
+    
+    <!-- Feature Showcase: LSP Hover -->
+    <figure style="margin: 0; padding: 16px; background: linear-gradient(135deg, #9C27B0 0%, #7B1FA2 100%); border-radius: 10px; box-shadow: 0 6px 24px rgba(156, 39, 176, 0.3);">
+      <div style="background: white; border-radius: 6px; padding: 12px; box-shadow: 0 3px 12px rgba(0,0,0,0.1);">
+        <img src="https://raw.githubusercontent.com/tonyngugi997/weaponize/master/images/Screenshot_20260403_104550_Termux" 
+             alt="LSP hover documentation" 
+             style="width: 100%; height: auto; max-width: 100%; border-radius: 4px; display: block; margin: 0 auto;">
+      </div>
+      <figcaption style="text-align: center; margin-top: 8px; color: white; font-weight: 500; font-size: 13px;">
+        📖 Instant Documentation
+      </figcaption>
+    </figure>
+    
+    <!-- Feature Showcase: File Search -->
+    <figure style="margin: 0; padding: 16px; background: linear-gradient(135deg, #3F51B5 0%, #2196F3 100%); border-radius: 10px; box-shadow: 0 6px 24px rgba(63, 81, 181, 0.3);">
+      <div style="background: white; border-radius: 6px; padding: 12px; box-shadow: 0 3px 12px rgba(0,0,0,0.1);">
+        <img src="https://raw.githubusercontent.com/tonyngugi997/weaponize/master/images/Screenshot_20260403_104550_Termux" 
+             alt="Telescope file finder" 
+             style="width: 100%; height: auto; max-width: 100%; border-radius: 4px; display: block; margin: 0 auto;">
+      </div>
+      <figcaption style="text-align: center; margin-top: 8px; color: white; font-weight: 500; font-size: 13px;">
+        🔍 Fuzzy File Search
+      </figcaption>
+    </figure>
+    
+    <!-- Feature Showcase: Indentation -->
+    <figure style="margin: 0; padding: 16px; background: linear-gradient(135deg, #4CAF50 0%, #388E3C 100%); border-radius: 10px; box-shadow: 0 6px 24px rgba(76, 175, 80, 0.3);">
+      <div style="background: white; border-radius: 6px; padding: 12px; box-shadow: 0 3px 12px rgba(0,0,0,0.1);">
+        <img src="https://raw.githubusercontent.com/tonyngugi997/weaponize/master/images/Screenshot_20260403_104550_Termux" 
+             alt="Visual indentation guides" 
+             style="width: 100%; height: auto; max-width: 100%; border-radius: 4px; display: block; margin: 0 auto;">
+      </div>
+      <figcaption style="text-align: center; margin-top: 8px; color: white; font-weight: 500; font-size: 13px;">
+        📏 Code Structure Guides
+      </figcaption>
+    </figure>
+    
+  </div>
+  
+  <div style="text-align: center; margin-top: 32px; padding: 24px; background: linear-gradient(135deg, #E91E63 0%, #C2185B 100%); border-radius: 16px; box-shadow: 0 8px 32px rgba(233, 30, 99, 0.3);">
+    <h4 style="color: white; margin: 0 0 12px 0; font-size: 20px;">🚀 Ready to Code Like a Pro!</h4>
+    <p style="color: white; margin: 0; font-size: 16px; font-weight: 500;">
+      Your Android phone is now a fully-equipped development environment
+    </p>
+    <div style="margin-top: 16px;">
+      <span style="background: rgba(255,255,255,0.2); color: white; padding: 8px 16px; border-radius: 20px; font-weight: 600; font-size: 14px; border: 2px solid rgba(255,255,255,0.3);">
+        ⚡ Professional IDE Features on Mobile
+      </span>
+    </div>
+  </div>
+</div>
