@@ -66,3 +66,30 @@ if not vim.loop.fs_stat(lazypath) then
     })
 end
 vim.opt.rtp:prepend(lazypath)
+
+require("lazy").setup({
+
+    -- =========================== THEME (Catppuccin Mocha) ===========================
+    {
+        "catppuccin/nvim",
+        name = "catppuccin",
+        priority = 1000,
+        config = function()
+            require("catppuccin").setup({
+                flavour = "mocha",   -- dark, hacker vibe
+                transparent_background = false,
+                term_colors = true,
+                integrations = {
+                    cmp = true,
+                    gitsigns = true,
+                    nvimtree = true,
+                    telescope = true,
+                    treesitter = true,
+                    indent_blankline = { enabled = true },
+                    lsp_trouble = true,
+                    which_key = true,
+                },
+            })
+            vim.cmd.colorscheme("catppuccin")
+        end,
+    },
