@@ -93,3 +93,43 @@ require("lazy").setup({
             vim.cmd.colorscheme("catppuccin")
         end,
     },
+
+        {
+        "williamboman/mason.nvim",
+        build = ":MasonUpdate",
+        config = function()
+            require("mason").setup()
+        end,
+    },
+    {
+        "williamboman/mason-lspconfig.nvim",
+        dependencies = { "williamboman/mason.nvim" },
+        config = function()
+            require("mason-lspconfig").setup({
+                ensure_installed = { "pyright", "lua_ls", "tsserver", "rust_analyzer" },
+                automatic_installation = true,
+            })
+        end,
+    },
+    {
+        "neovim/nvim-lspconfig",
+        dependencies = { "williamboman/mason.nvim", "williamboman/mason-lspconfig.nvim" },
+        config = function()
+            local lspconfig = require("lspconfig")
+            local capabilities = vim.lsp.protocol.make_client_capabilities()
+            capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
+
+            local on_attach = function(client, bufnr)
+                -- Enable completion trigger
+                if client.supports_method("textDocument/completion") then
+                    vim.lsp.completion.enable(true, client.id, bufnr, { autotrigger = true })
+                end
+                -- Buffer keymaps
+                local bufopts = { buffer = bufnr, noremap = true, silent = true }
+                vim.keymap.set("n", "gd", vim.lsp.buf.definition, bufopts)
+                vim.keymap.set("n", "K", vim.lsp.buf.hover, bufopts)
+                vim.keymap.set("n", "gr", vim.lsp.buf.references, bufopts)
+                vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, bufopts)
+                vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, bufopts)
+            end
+
