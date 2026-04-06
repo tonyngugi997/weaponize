@@ -409,3 +409,54 @@ require("lazy").setup({
             })
         end,
     },
+
+      -- =========================== WHICH-KEY (Help popup) ===========================
+    {
+        "folke/which-key.nvim",
+        config = function()
+            require("which-key").setup({ window = { border = "single" } })
+        end,
+    },
+
+    
+    -- =========================== DASHBOARD ===========================
+    {
+        "glepnir/dashboard-nvim",
+        event = "VimEnter",
+        config = function()
+            local db = require("dashboard")
+            db.setup({
+                theme = "hyper",
+                config = {
+                    header = {
+                        "                                                                      ",
+                        "  ██     ██ ███████  █████  ██████  ██████  ███    ██ ██ ███████╗ ███████╗",
+                        "  ██     ██ ██      ██   ██ ██   ██ ██   ██ ████   ██ ██ ██      ██      ",
+                        "  ██  █  ██ █████   ███████ ██████  ██████  ██ ██  ██ ██ █████   ███████╗",
+                        "  ██ ███ ██ ██      ██   ██ ██      ██   ██ ██  ██ ██ ██ ██           ██",
+                        "   ███ ███  ███████ ██   ██ ██      ██   ██ ██   ████ ██ ███████ ███████║",
+                        "                                                                      ",
+                        "  ⚡  W E A P O N I Z E  |  H A C K E R   E D I T I O N  ⚡",
+                        "                                                                      ",
+                    },
+                    center = {
+                        { icon = "🔍 ", desc = "Find File", action = "Telescope find_files", shortcut = "<leader>ff" },
+                        { icon = "📁 ", desc = "Explorer", action = "NvimTreeToggle", shortcut = "<leader>e" },
+                        { icon = "📝 ", desc = "New File", action = "enew", shortcut = "Ctrl + n" },
+                        { icon = "⚙️ ", desc = "Plugins", action = "Lazy", shortcut = "<leader>l" },
+                        { icon = "🐙 ", desc = "Git Status", action = "Neogit", shortcut = "<leader>gg" },
+                    },
+                    footer = {
+                        "🔥 Your Android is now a development fortress.",
+                        "   Type <leader>? for all keymaps.",
+                        "",
+                    },
+                },
+            })
+        end,
+    },
+}, {
+    install = { colorscheme = { "catppuccin" } },
+    checker = { enabled = true, notify = false },
+    change_detection = { notify = false },
+})
