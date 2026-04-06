@@ -460,3 +460,32 @@ require("lazy").setup({
     checker = { enabled = true, notify = false },
     change_detection = { notify = false },
 })
+
+
+-- ----------------------------------------------------------------------------
+-- 4. FINAL AUTOCOMMANDS (LSP, format on save, etc.)
+-- ----------------------------------------------------------------------------
+-- Ensure LSP completion triggers automatically
+vim.api.nvim_create_autocmd("LspAttach", {
+    callback = function(args)
+        local client = vim.lsp.get_client_by_id(args.data.client_id)
+        if client and client.supports_method("textDocument/completion") then
+            vim.lsp.completion.enable(true, client.id, args.buf, { autotrigger = true })
+        end
+    end,
+})
+
+-- Auto‑format on save (optional – uncomment if you want)
+-- vim.api.nvim_create_autocmd("BufWritePre", {
+--   pattern = { "*.py", "*.lua", "*.js", "*.ts", "*.rs" },
+--   callback = function() vim.lsp.buf.format({ async = false }) end,
+-- })
+
+-- Highlight yanked text
+vim.api.nvim_create_autocmd("TextYankPost", {
+    callback = function()
+        vim.highlight.on_yank({ higroup = "IncSearch", timeout = 150 })
+    end,
+})
+
+print("🔥 Weaponize Hacker Edition loaded. Type <leader>? for help.")
