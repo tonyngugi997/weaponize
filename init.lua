@@ -1,7 +1,19 @@
---##############################################
---weaponize configuration script
---###############################################
--- we start with basic default settings
+-- ============================================================================
+-- WEAPONIZE - Neovim Configuration
+-- ============================================================================
+-- Author:  Tony Ngugi
+-- GitHub:  @tonyngugi997
+-- Repo:    https://github.com/tonyngugi997/weaponize
+-- License: MIT
+-- ----------------------------------------------------------------------------
+-- Turn your Android into a god-mode development environment.
+-- No laptop. No PC. No excuses.
+-- ============================================================================
+
+
+----------------------------------------------------------------------------
+-- basic defaults (feel free to customize these as you like)
+-- ----------------------------------------------------------------------------
 vim.opt.number = true
 vim.opt.relativenumber = false
 vim.opt.tabstop = 4
@@ -27,9 +39,9 @@ vim.opt.splitbelow = true
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
---##############################################
-
---GLOBAL KEYMAPS
+-- ----------------------------------------------------------------------------
+-- 2. GLOBAL KEYMAPS
+-- ----------------------------------------------------------------------------
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
@@ -50,14 +62,12 @@ map("n", "[d", vim.diagnostic.goto_prev, { desc = "Previous diagnostic" })
 map("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostic" })
 map("n", "<leader>f", function() vim.lsp.buf.format({ async = true }) end, { desc = "Format file" })
 
---##############################################
-
--- terminal (toggleterm) 
+-- Terminal (toggleterm)
 map("n", "<leader>tt", ":ToggleTerm<CR>", { desc = "Toggle terminal" })
 
---##############################################
-
---PLUGIN CONFIGURATIONS (lazy.nvim)
+-- ----------------------------------------------------------------------------
+-- 3. PLUGIN MANAGER (lazy.nvim)
+-- ----------------------------------------------------------------------------
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
     vim.fn.system({
@@ -94,7 +104,8 @@ require("lazy").setup({
         end,
     },
 
-        {
+    -- =========================== LSP & MASON (Python, Lua, JS/TS, Rust) ===========================
+    {
         "williamboman/mason.nvim",
         build = ":MasonUpdate",
         config = function()
@@ -133,7 +144,7 @@ require("lazy").setup({
                 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, bufopts)
             end
 
-              -- Python (pyright) – this gives you os.listdir, etc.
+            -- Python (pyright) – this gives you os.listdir, etc.
             lspconfig.pyright.setup({
                 on_attach = on_attach,
                 capabilities = capabilities,
@@ -147,8 +158,7 @@ require("lazy").setup({
                     },
                 },
             })
-
-                        -- Lua
+            -- Lua
             lspconfig.lua_ls.setup({
                 on_attach = on_attach,
                 capabilities = capabilities,
@@ -159,10 +169,8 @@ require("lazy").setup({
             -- Rust
             lspconfig.rust_analyzer.setup({ on_attach = on_attach, capabilities = capabilities })
         end,
-    }
+    },
 
-
-    
     -- =========================== AUTOCOMPLETION (Bordered, Icons, Snippets) ===========================
     {
         "hrsh7th/nvim-cmp",
@@ -237,9 +245,7 @@ require("lazy").setup({
     "rafamadriz/friendly-snippets",
     "onsails/lspkind.nvim",
 
-
-    
-    --FILE EXPLORER (nvim-tree)
+    -- =========================== FILE EXPLORER (nvim-tree) ===========================
     {
         "nvim-tree/nvim-tree.lua",
         dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -264,7 +270,7 @@ require("lazy").setup({
         end,
     },
 
-       -- =========================== TELESCOPE (Fuzzy Finder) ===========================
+    -- =========================== TELESCOPE (Fuzzy Finder) ===========================
     {
         "nvim-telescope/telescope.nvim",
         dependencies = { "nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons" },
@@ -285,8 +291,7 @@ require("lazy").setup({
         end,
     },
 
-    
-    -- =========================== INDENTATION GUIDES (fixed) ===========================
+    -- =========================== INDENTATION GUIDES ===========================
     {
         "lukas-reineke/indent-blankline.nvim",
         main = "ibl",
@@ -319,7 +324,7 @@ require("lazy").setup({
         end,
     },
 
-        -- =========================== STATUSLINE (Lualine) ===========================
+    -- =========================== STATUSLINE (Lualine) ===========================
     {
         "nvim-lualine/lualine.nvim",
         dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -338,7 +343,7 @@ require("lazy").setup({
         end,
     },
 
-    --=========================== TABLINE (Bufferline) ===========================
+    -- =========================== TABLINE (Bufferline) ===========================
     {
         "akinsho/bufferline.nvim",
         version = "*",
@@ -365,7 +370,7 @@ require("lazy").setup({
         end,
     },
 
-      -- =========================== COMMENT TOGGLE ===========================
+    -- =========================== COMMENT TOGGLE ===========================
     {
         "numToStr/Comment.nvim",
         config = function()
@@ -373,7 +378,7 @@ require("lazy").setup({
         end,
     },
 
-    -- =========================== SURROUND ===========================
+    -- =========================== SURROUND (fixed plugin name) ===========================
     {
         "kylechui/nvim-surround",
         version = "*",
@@ -382,7 +387,7 @@ require("lazy").setup({
         end,
     },
 
-        -- =========================== TERMINAL (Toggleterm) ===========================
+    -- =========================== TERMINAL (Toggleterm) ===========================
     {
         "akinsho/toggleterm.nvim",
         config = function()
@@ -410,7 +415,7 @@ require("lazy").setup({
         end,
     },
 
-      -- =========================== WHICH-KEY (Help popup) ===========================
+    -- =========================== WHICH-KEY (Help popup) ===========================
     {
         "folke/which-key.nvim",
         config = function()
@@ -418,15 +423,14 @@ require("lazy").setup({
         end,
     },
 
-    
-    -- =========================== DASHBOARD ===========================
+    -- =========================== DASHBOARD (Weaponize startup screen) ===========================
     {
         "glepnir/dashboard-nvim",
         event = "VimEnter",
         config = function()
             local db = require("dashboard")
             db.setup({
-                theme = "hyper",
+                theme = "hyper",   -- hacker style
                 config = {
                     header = {
                         "                                                                      ",
@@ -460,7 +464,6 @@ require("lazy").setup({
     checker = { enabled = true, notify = false },
     change_detection = { notify = false },
 })
-
 
 -- ----------------------------------------------------------------------------
 -- 4. FINAL AUTOCOMMANDS (LSP, format on save, etc.)
