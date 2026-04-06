@@ -364,3 +364,20 @@ require("lazy").setup({
             require("nvim-autopairs").setup()
         end,
     },
+
+      -- =========================== COMMENT TOGGLE ===========================
+    {
+        "numToStr/Comment.nvim",
+        config = function()
+            require("Comment").setup()
+        end,
+    },
+
+    -- =========================== SURROUND (fixed plugin name) ===========================
+    {
+        "kylechui/nvim-surround",
+        version = "*",
+        config = function()
+            require("nvim-surround").setup({})
+        end,
+    },
