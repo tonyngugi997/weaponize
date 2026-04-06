@@ -373,11 +373,39 @@ require("lazy").setup({
         end,
     },
 
-    -- =========================== SURROUND (fixed plugin name) ===========================
+    -- =========================== SURROUND ===========================
     {
         "kylechui/nvim-surround",
         version = "*",
         config = function()
             require("nvim-surround").setup({})
+        end,
+    },
+
+        -- =========================== TERMINAL (Toggleterm) ===========================
+    {
+        "akinsho/toggleterm.nvim",
+        config = function()
+            require("toggleterm").setup({
+                size = 12,
+                open_mapping = [[<leader>tt]],
+                direction = "horizontal",
+                start_in_insert = true,
+                shade_terminals = true,
+            })
+        end,
+    },
+
+    -- =========================== SYNTAX HIGHLIGHTING (Treesitter) ===========================
+    {
+        "nvim-treesitter/nvim-treesitter",
+        build = ":TSUpdate",
+        config = function()
+            require("nvim-treesitter.configs").setup({
+                ensure_installed = { "lua", "python", "javascript", "typescript", "rust", "c", "bash", "json", "yaml" },
+                auto_install = true,
+                highlight = { enable = true },
+                indent = { enable = true },
+            })
         end,
     },
