@@ -337,3 +337,30 @@ require("lazy").setup({
             })
         end,
     },
+
+    --=========================== TABLINE (Bufferline) ===========================
+    {
+        "akinsho/bufferline.nvim",
+        version = "*",
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+        config = function()
+            require("bufferline").setup({
+                options = {
+                    numbers = "none",
+                    close_command = "bdelete! %d",
+                    right_mouse_command = "bdelete! %d",
+                    diagnostics = "nvim_lsp",
+                    offsets = { { filetype = "NvimTree", text = "Explorer", text_align = "left" } },
+                },
+            })
+        end,
+    },
+
+    -- =========================== AUTO-PAIRING ===========================
+    {
+        "windwp/nvim-autopairs",
+        event = "InsertEnter",
+        config = function()
+            require("nvim-autopairs").setup()
+        end,
+    },
